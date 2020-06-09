@@ -1,0 +1,50 @@
+<head>
+	<title>antySmodż-dashboard</title>
+	<script src="script.js"></script>
+</head>
+<body>
+	<style>
+		.reading{
+			text-decoration: underline #5996f7;
+			font-family: "Courier New", Courier, monospace;
+			padding: 1vw
+		}
+		
+		p{
+			font-family: "Courier New", Courier, monospace;
+		}
+		
+		h1{
+			padding: 8px;
+			font-size: 15px;
+		}
+		
+		h3{
+			font-size: 15px;
+		}
+		
+		b{
+			font-family: "Courier New", Courier, monospace;
+			font-size: 25px
+		}
+	</style>
+	<h5>here you are able to see the Readings<br/><b>antySmodż.</b></h5>
+	<br/>
+	<p>Temperatura:</p>
+	<h2 id="temperature" class="reading">T</h2>
+	<p>Wilgotność:</p>
+	<h2 id="humidity" class="reading">H</h2>
+	<p>Ciśnienie:</p>
+	<h2 id="atm_pressure" class="reading">P</h2>
+	<p>Zanieczyszczenie powietrza:</p>
+	<div style="padding: 2vw; float: left;">
+		<h2 style="padding-top: 3vw;" id="pollution_level" class="reading">0</h2>
+		<h3 id="p_level">VERY_LOW</h3>
+		<p style="float: left; font-size: 11px;">  CAQI: </p><h1 style="padding: 0.5vw;" id="main_caqi" class="reading">aa</h1>
+	</div>
+	<div style="margin: 2vw; padding: 3px; float: left; border: 2px dotted #427ad4;">
+		<p style="float: left; font-size: 11px;">pm 1.0:</p><h1 id="pm1_0" class="reading">1.0</h1>
+		<p style="float: left; font-size: 11px;">pm 2.5:</p><h1 id="pm2_5" class="reading">2.5</h1>
+		<p style="float: left; font-size: 11px;">pm 10.0:</p><h1 id="pm10_0" class="reading">10.0</h1>
+	</div>
+</body>
