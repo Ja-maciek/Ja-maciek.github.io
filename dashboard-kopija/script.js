@@ -3,7 +3,7 @@ let sensorIP = params.get('sensorIP');
 
 function read(sensorName){
 	try{
-		var request = new Request(sensorIP + "/justAsking?readPlease=" + sensorName);
+		var request = new Request("http://" + sensorIP + "/justAsking?readPlease=" + sensorName);
 		return fetch(request).then(
 			function(response) {
 				return response.text();
