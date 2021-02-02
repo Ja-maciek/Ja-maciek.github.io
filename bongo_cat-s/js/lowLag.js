@@ -16,7 +16,7 @@ var lowLag = new function(){
 
 	this.sm2url = 'sm2/swf/';
 
-	this.soundUrl = "";
+	this.soundUrl = "bongo_cat-s/";
 
 	this.debug = "console";
 
@@ -322,7 +322,7 @@ this.audioContextPendingRequest = {};
 		
 		for(var i = 0; i < urls.length; i++){
 			var url = urls[i];
-			var type = "audio/"+lowLag.getExtension(url);
+			var type = "bongo_cat-s/audio/"+lowLag.getExtension(url);
 			var sourceElem = this.createElement("source",{"src":lowLag.soundUrl+url,"type":type});
 			audioElem.appendChild(sourceElem);
 		}
