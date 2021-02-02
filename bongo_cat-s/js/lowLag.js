@@ -322,7 +322,7 @@ this.audioContextPendingRequest = {};
 		
 		for(var i = 0; i < urls.length; i++){
 			var url = urls[i];
-			var type = "bongo_cat-s/audio/"+lowLag.getExtension(url);
+			var type = "audio/"+lowLag.getExtension(url);
 			var sourceElem = this.createElement("source",{"src":lowLag.soundUrl+url,"type":type});
 			audioElem.appendChild(sourceElem);
 		}
