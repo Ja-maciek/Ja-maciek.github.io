@@ -189,11 +189,13 @@ $(document).ready(function() {
   });
 });
 $.loadSimple = function(file) {
+  file = "bongo_cat-s/" + file;
   for (i = 0; i <= 1; i++) {
     lowLag.load([file + ".mp3", file + ".wav"], file + i);
   }
 }
 $.load = function(file, start, end) {
+  file = "bongo_cat-s/" + file;
   for (i = start; i <= end; i++) {
     lowLag.load([file + i + ".mp3", file + i + ".wav"], file + i);
   }
