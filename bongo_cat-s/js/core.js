@@ -24,11 +24,11 @@ const KeyEnum = Object.freeze({
   "8": 8,
   "9": 9,
   "0": 0,
-  "F": 0,//s
-  "G": 1,//s
-  "H": 2,//s
-  "J": 3,//s
-  "K": 4,//s
+  "G": 0,//s
+  "H": 1,//s
+  "J": 2,//s
+  "K": 3,//s
+  "L": 4,//s
   " ": 0,
   "C": 1,
   "Q": 1,
@@ -58,11 +58,11 @@ const InstrumentPerKeyEnum = Object.freeze({
   "8": InstrumentEnum.KEYBOARD,
   "9": InstrumentEnum.KEYBOARD,
   "0": InstrumentEnum.KEYBOARD,
-  "F": InstrumentEnum.SAXOPHONE,//s
   "G": InstrumentEnum.SAXOPHONE,//s
   "H": InstrumentEnum.SAXOPHONE,//s
   "J": InstrumentEnum.SAXOPHONE,//s
   "K": InstrumentEnum.SAXOPHONE,//s
+  "L": InstrumentEnum.SAXOPHONE,//s
   " ": InstrumentEnum.MEOW,
   "C": InstrumentEnum.CYMBAL,
   "Q": InstrumentEnum.MARIMBA,
@@ -99,27 +99,27 @@ const TapKeyEquivalentEnum = Object.freeze({
   },
   "tap-1": {
     "KEYBOARD": ["1"],
-    "SAXOPHONE": ["F"],//s
+    "SAXOPHONE": ["G"],//s
     "MARIMBA": ["Q"]
   },
   "tap-2": {
     "KEYBOARD": ["2"],
-    "SAXOPHONE": ["G"],//s
+    "SAXOPHONE": ["H"],//s
     "MARIMBA": ["W"]
   },
   "tap-3": {
     "KEYBOARD": ["3"],
-    "SAXOPHONE": ["H"],//s
+    "SAXOPHONE": ["J"],//s
     "MARIMBA": ["E"]
   },
   "tap-4": {
     "KEYBOARD": ["4"],
-    "SAXOPHONE": ["J"],//s
+    "SAXOPHONE": ["K"],//s
     "MARIMBA": ["R"]
   },
   "tap-5": {
     "KEYBOARD": ["5"],
-    "SAXOPHONE": ["K"],//s
+    "SAXOPHONE": ["L"],//s
     "MARIMBA": ["T"]
   },
   "tap-6": {
