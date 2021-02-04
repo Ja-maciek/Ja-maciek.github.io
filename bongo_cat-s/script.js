@@ -1,4 +1,4 @@
-import Tone from "Tone";
+import Tone from "./lib/Tone.js";
 
 pawNames = ["left", "right", "mouth"];
 
