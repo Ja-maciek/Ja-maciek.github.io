@@ -1,5 +1,3 @@
-import * as Tone from 'Tone.js';
-
 pawNames = ["left", "right", "mouth"];
 
 nameLib = {
