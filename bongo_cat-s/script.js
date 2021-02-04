@@ -59,8 +59,8 @@ function setPawsTo(pawsType, pawsState, ifSidePaws=false){// left/right up/down
 window.onload = () => {
     const sampler = new Tone.Sampler({
         urls: {
-            "A1": "bongo0.mp3",
-            "A2": "bongo1.mp3",
+            "A1": "bongo1.mp3",
+            "A2": "bongo0.mp3",
             "F9": "saxophone3.mp3",
             //"A4": "saxophone1.mp3",
             //"A5": "saxophone2.mp3",
