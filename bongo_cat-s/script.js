@@ -110,11 +110,10 @@ window.onload = () => {
                 instrument = nameLib[letter]["instrument"];
 
                 setInstrumentTo(instrument);
-                sampler.triggerAttackRelease(nameLib[letter]["sound"]);
-
                 if(pawNames[nameLib[letter]["paw"]]!="mouth"){
                     setPawsTo(pawNames[nameLib[letter]["paw"]], "down", ifSidePaws=nameLib[letter]["side"]);
                 }
+                sampler.triggerAttackRelease(nameLib[letter]["sound"]);
             }
         });
 
