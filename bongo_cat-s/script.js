@@ -41,10 +41,8 @@ fPressed = false;
 
 function setInstrumentTo(instrumentName){
     instrumentElements = document.getElementsByClassName("instruments")[0].children;
-    console.log(instrumentName);
     if(instrumentName=="meow"){
         document.getElementById("mouth").children[0].src = `${catBodyPratsSrc}o-mouth.png`;
-        console.log("a");
     }else{
         for(i=0;i<instrumentElements.length;i++){
             instrumentElements[i].style.display = instrumentElements[i].id==instrumentName ? null : "none";
@@ -53,11 +51,8 @@ function setInstrumentTo(instrumentName){
 }
 
 function setPawsTo(pawsType, pawsState, ifSidePaws=false){// left/right up/down
-    //Elements = document.getElementById("")[0].children;
-
     paw_leftElement = document.getElementById("paw-left");
     paw_rightElement = document.getElementById("paw-right");
-    console.log(`${catBodyPratsSrc}${pawsState=="up"?"up": (ifSidePaws?"side":"down")}-paw-${pawsType}.png`);
     eval(`paw_${pawsType}Element`).children[0].src = `${catBodyPratsSrc}${pawsState=="up"?"up": (ifSidePaws?"side":"down")}-paw-${pawsType}.png`;
 }
 
@@ -125,7 +120,6 @@ window.onload = () => {
                     setPawsTo(pawNames[nameLib[letter]["paw"]], "up");
                 }else{
                     document.getElementById("mouth").children[0].src = `${catBodyPratsSrc}m-mouth.png`;
-                    console.log(catBodyPratsSrc+"m-mouth.png");
                 }
 
                 fPressed = false;
