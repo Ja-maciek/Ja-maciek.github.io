@@ -1,6 +1,6 @@
 console.log("ddddd");
 
-//window.addEventListener("load", ()=>{
+window.addEventListener("load", ()=>{
 	let mic, meter;
 	let initialized = false;
 
@@ -58,4 +58,4 @@ console.log("ddddd");
 			i++;
 		}
 	}
-//}, true);
+}, true);
