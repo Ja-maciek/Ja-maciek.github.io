@@ -20,7 +20,6 @@ console.log("ddddd");
 				meter = new Tone.Meter();
 				mic.connect(meter);*/
 				userStartAudio()
-				//cnv.mousePressed();
 				mic = new p5.AudioIn();
 				mic.start();
 
@@ -38,18 +37,18 @@ console.log("ddddd");
 		}
 
 
-		/*let dim = [50, 100];
+		let dim = [50, 100];
 		for(let j=0;j<dim[0]*dim[1];j++){
 			push();
 			translate(Math.floor(j/dim[0])*20+10, j%dim[0]*20+10);
 			rotate(2*PI*(i+j)/(height/10));
 			if(initialized && Tone.context.state == "running"){
-				rect(-10, -10, map(Tone.dbToGain(meter.getLevel())*100000, 0.9, 1.1, 0, 50), map(Tone.dbToGain(meter.getLevel())*100000, 1.1, 0.9, 0, 50));
+				rect(-10, -10, map(mic.getLevel(), 0, 1, 0, 50), map(mic.getLevel(), 1, 0, 0, 50));
 			}else{
 				rect(-10, -10, map(mouseX, 0, width, 0, 200), map(mouseY, 0, height, 0, 200));
 			}
 			pop();
-		}*/
+		}
 
 
 		if(i>=height){
