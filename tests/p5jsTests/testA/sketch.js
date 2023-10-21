@@ -33,7 +33,7 @@ console.log("ddddd");
 
 	function draw(){
 		background(0);
-		if(initialized && Tone.context.state == "running"){
+		if(initialized){
 				console.log(mic.getLevel());
 		}
 
