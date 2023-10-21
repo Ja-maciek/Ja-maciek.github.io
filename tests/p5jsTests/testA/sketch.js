@@ -43,7 +43,7 @@ console.log("ddddd");
 			translate(Math.floor(j/dim[0])*20+10, j%dim[0]*20+10);
 			rotate(2*PI*(i+j)/(height/10));
 			if(initialized){
-				rect(-10, -10, map(mic.getLevel(), 0.000013, 0.000015, 0, 50), map(mic.getLevel(), 0.000015, 0.000013, 0, 50));
+				rect(-10, -10, map(mic.getLevel(), 0.00001458, 0.00001470, 0, 50), map(mic.getLevel(), 0.00001470, 0.00001458, 0, 50));
 			}else{
 				rect(-10, -10, map(mouseX, 0, width, 0, 200), map(mouseY, 0, height, 0, 200));
 			}
