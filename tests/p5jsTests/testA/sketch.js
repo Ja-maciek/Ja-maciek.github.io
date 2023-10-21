@@ -19,8 +19,8 @@ console.log("ddddd");
 				mic.open();
 				meter = new Tone.Meter();
 				mic.connect(meter);*/
-
-				cnv.mousePressed(userStartAudio);
+				userStartAudio()
+				//cnv.mousePressed();
 				mic = new p5.AudioIn();
 				mic.start();
 
