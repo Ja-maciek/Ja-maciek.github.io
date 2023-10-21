@@ -11,7 +11,7 @@ console.log("ddddd");
 		let micBttn = document.getElementById("micBttn");
 		//micBttn.disabled = !Tone.UserMedia.supported;
 		micBttn.addEventListener("click", () => {
-			console.log("aaa");
+			console.log("dddd");
 			if (!initialized) {
 				micBttn.style.display = "none";
 				/*Tone.context.resume();
