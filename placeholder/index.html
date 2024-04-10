@@ -3,7 +3,7 @@ a0
 <script>
 
     window.onload = () => {
-        document.innerHTML += "a1";
+        document.getElementById("sbmt").value += "a1";
 
         fetch("wttr.in/?format=j2")
         .then((resp) => {
