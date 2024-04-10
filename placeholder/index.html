@@ -1,0 +1,11 @@
+<input type="button" id="sbmt" value="Enter">
+
+<script>
+
+    fetch("wttr.in/?format=j2")
+    .then((resp) => {
+        document.innerHTML += resp;
+    })
+    .catch((e) => { throw e; });
+
+</script>
