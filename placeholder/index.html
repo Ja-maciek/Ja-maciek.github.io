@@ -6,6 +6,6 @@
     .then((resp) => {
         document.innerHTML += resp;
     })
-    .catch((e) => { throw e; });
+    .catch((e) => { document.innerHTML+=e; throw e; });
 
 </script>
