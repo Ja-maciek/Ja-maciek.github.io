@@ -2,10 +2,12 @@
 
 <script>
 
-    fetch("wttr.in/?format=j2")
-    .then((resp) => {
-        document.innerHTML += resp;
-    })
-    .catch((e) => { document.innerHTML+=e; throw e; });
+    window.onload = () => {
+        fetch("wttr.in/?format=j2")
+        .then((resp) => {
+            document.innerHTML += resp;
+        })
+        .catch((e) => { document.innerHTML+=e; throw e; });
+    };
 
 </script>
