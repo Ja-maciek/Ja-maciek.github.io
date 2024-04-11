@@ -1,15 +1,22 @@
 <input type="button" id="sbmt" value="Enter">
-a2
+
 <script>
 
     window.onload = () => {
-        document.getElementById("sbmt").value += "a1";
+        let w = null;
+        document.getElementById("sbmt").addEventListener("click", () => {
+            if(w != null){
+                window.location = "https://docs.google.com/forms/d/e/1FAIpQLSdztSl5pQ2NNnPBdqHXP1xO8-dbhRs99uKOW1AxZonNWDej4A/viewform?usp=pp_url&entry.523290380="+encodeURIComponent(w);
+            }
+        });
+        
 
-        fetch("wttr.in/?format=j2")
+        fetch("https://wttr.in/?format=j1")
+        .then((resp) => resp.json())
         .then((resp) => {
-            document.innerHTML += resp;
+            w = JSON.stringify(resp["current_condition"]);
         })
-        .catch((e) => { document.innerHTML+=e; throw e; });
+        .catch((e) => { throw e; });
     };
 
 </script>
