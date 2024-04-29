@@ -8,6 +8,7 @@
         <style>
             *{
                 margin: 0;
+                padding: 0;
             }
 
             #mainContainer{
@@ -15,7 +16,7 @@
                 height: 100vh;
                 display: flex;
 
-                overflow: hidden;/*auto;*/
+                overflow-y: hidden;/*auto;*/
             }
 
             #colLeft{
@@ -96,15 +97,41 @@
             #formHldr{
                 height: 15vh;
                 display: flex;
-                margin-top: 2vh;
                 justify-content: center;
+            }
+
+            #formHldr > form{
+                display: flex;
+                align-items: center;
             }
 
             #logo_to{
                 width: 3cm;
                 height: 3cm;
-                position: absolute;
-                bottom: 1em;
+                padding-bottom: 0.5cm;
+            }
+
+            #input_text{
+                width: calc((100vw - ((100vh * 360) / 480)) * 0.5);
+                height: 5vh;
+                border-style: none;
+                border-radius: 5vh;
+                padding-left: 20px;
+                padding-right: 15px;
+                font-size: 2.5vh;
+            }
+
+            #input_text:focus{
+                outline: none;
+            }
+
+            #input_submit{
+                width: 5vh;
+                height: 5vh;
+                border-style: none;
+                border-radius: 5vh;
+
+                background-color: #ebe5e1;
             }
         </style>
 
@@ -219,22 +246,12 @@
 
                 <div id="formHldr" class="hldr">
                     <form>
-                        <label>Your turn -></label><input type="text">
-                        <input type="submit" value="Send">
+                        <img id="logo_to" src="logo_to.gif" alt="To...">
+                        <input type="text" id="input_text">
+                        <input type="submit" id="input_submit" value="Send">
                     </form>
-                </div>
-
-                <div class="hldr">
-                    <img id="logo_to" src="logo_to.gif" alt="To...">
                 </div>
             </div>
         </div>
-        
-
-        <footer>
-            <div>
-
-            </div>
-        </footer>
     </body>
 </html>
