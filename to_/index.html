@@ -72,7 +72,6 @@
                 gap: 10px;
 
                 overflow-y: auto;
-                background-color: #fcf9f7;
             }
 
             .cnvsEl{
@@ -193,9 +192,45 @@
                     writeLetters(ctxt, text);
                 }
 
-                let cnvs = document.getElementsByTagName("canvas")[0];
+                function addDedicationToTheList(imgFilename){
+                    let cnvsHldr = document.getElementById("cnvsHldr");
 
-                write(cnvs, "ania blanda");
+                    let tDiv0 = document.createElement("div");
+                    tDiv0.classList = "cnvsEl";
+
+                    let tCanvas0 = document.createElement("canvas");
+                    tCanvas0.width = "800";
+                    tCanvas0.height = "800";
+                    tDiv0.appendChild(tCanvas0);
+
+                    let tImg0 = document.createElement("img");
+                    tImg0.src = imgFilename;
+                    tDiv0.appendChild(tImg0);
+
+                    cnvsHldr.appendChild(tDiv0);
+
+                    return tCanvas0;
+                }
+
+                function randomInt(max) {
+                    return Math.floor(Math.random()*max);
+                }
+
+                function dedicateInText(message){
+                    let cnvs = addDedicationToTheList(`billboards/bb${randomInt(5)}.jpg`)
+                    write(cnvs, message.toLowerCase());
+                }
+
+                function dedicateInImage(imgFilename){
+                    addDedicationToTheList("dedications_"+imgFilename);
+                }
+
+                document.getElementById("input_submit").onclick = function(e){
+                    e.preventDefault();
+                    let textInputEl = document.getElementById("input_text");
+                    dedicateInText(textInputEl.value);
+                    textInputEl.value = "";
+                }
             };
         </script>
     </head>
@@ -216,30 +251,10 @@
                 </div>
 
                 <div id="cnvsHldr" class="hldr">
-                    <div class="cnvsEl">
+                    <!--div class="cnvsEl">
                         <canvas width="800" height="800"></canvas>
                         <img alt="" src="billboards/bb0.jpg">
-                    </div>
-
-                    <div class="cnvsEl">
-                        <canvas width="800" height="800"></canvas>
-                        <img alt="" src="billboards/bb1.jpg">
-                    </div>
-
-                    <div class="cnvsEl">
-                        <canvas width="800" height="800"></canvas>
-                        <img alt="" src="billboards/bb2.jpg">
-                    </div>
-
-                    <div class="cnvsEl">
-                        <canvas width="800" height="800"></canvas>
-                        <img alt="" src="billboards/bb3.jpg">
-                    </div>
-
-                    <div class="cnvsEl">
-                        <canvas width="800" height="800"></canvas>
-                        <img alt="" src="billboards/bb4.jpg">
-                    </div>
+                    </div-->
                 </div>
 
                 <div id="formHldr" class="hldr">
