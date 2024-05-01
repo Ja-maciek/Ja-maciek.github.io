@@ -194,7 +194,7 @@
                     writeLetters(ctxt, text);
                 }
 
-                function addDedicationToTheList(imgFilename){
+                function addDedicationToTheList(imgFilename="", withImg=true){
                     let tDiv0 = document.createElement("div");
                     tDiv0.classList = "cnvsEl";
 
@@ -203,9 +203,11 @@
                     tCanvas0.height = "800";
                     tDiv0.appendChild(tCanvas0);
 
-                    let tImg0 = document.createElement("img");
-                    tImg0.src = imgFilename;
-                    tDiv0.appendChild(tImg0);
+                    if(withImg){
+                        let tImg0 = document.createElement("img");
+                        tImg0.src = imgFilename;
+                        tDiv0.appendChild(tImg0);
+                    }
 
                     cnvsHldr.appendChild(tDiv0);
 
@@ -217,7 +219,7 @@
                 }
 
                 function dedicateInText(message){
-                    let cnvs = addDedicationToTheList("");//`billboards/bb${randomInt(5)}.jpg`)
+                    let cnvs = addDedicationToTheList(withImg=false);//`billboards/bb${randomInt(5)}.jpg`)
                     write(cnvs, message.toLowerCase());
                     return cnvs;
                 }
