@@ -75,7 +75,7 @@
             }
 
             .cnvsEl{
-                width: 45%;
+                width: 70%;
                 position: relative;
                 padding: 5px;
             }
@@ -217,7 +217,7 @@
                 }
 
                 function dedicateInText(message){
-                    let cnvs = addDedicationToTheList(`billboards/bb${randomInt(5)}.jpg`)
+                    let cnvs = addDedicationToTheList("");//`billboards/bb${randomInt(5)}.jpg`)
                     write(cnvs, message.toLowerCase());
                     return cnvs;
                 }
